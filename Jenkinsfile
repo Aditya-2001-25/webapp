@@ -19,9 +19,7 @@ pipeline {
             }
         }
         stage('Sonar-Report') {
-                steps {
-                    bat 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
-                        }
-                     }
-    }
+ steps {
+ sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://lpcalhost:9000 -Dsonar.analysis.mode=publish'
+ }
 }
