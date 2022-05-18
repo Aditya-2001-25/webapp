@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'master'
+        label 'videopro'
     }
     stages {
         stage('Build') {
@@ -20,7 +20,6 @@ pipeline {
         }
         stage('Sonar-Report') {
  steps {
- sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
+ sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://lpcalhost:9000 -Dsonar.analysis.mode=publish'
  }
-    }
 }
