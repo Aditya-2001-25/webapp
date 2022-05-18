@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'master'
+        label 'videopro'
     }
     stages {
         stage('Build') {
